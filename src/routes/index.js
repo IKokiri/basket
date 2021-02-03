@@ -1,7 +1,8 @@
 const routes = require('express').Router();
+const controller = require("../basket/controller");
 
 routes.get('/', (req, res) => {
-    res.send(`Busca todos`);
+    controller.get()
 });
 
 routes.get('/:id', (req, res) => {
