@@ -17,10 +17,13 @@
   },
   "homepage": "https://github.com/IKokiri/basket#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "sequelize": "^6.5.0",
-    "sqlite3": "^5.0.0"
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "pg": "^8.5.1",
+    "sequelize": "^6.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.7"

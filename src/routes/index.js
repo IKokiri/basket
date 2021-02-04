@@ -10,8 +10,8 @@ routes.get('/:id', (req, res) => {
 });
 
 routes.post('/', (req, res) => {
-    console.log(req.body)
-    res.send("inserido")
+    controller.post(req)
+    res.send("acdff")
 });
 
 routes.put('/:id', (req, res) => {
