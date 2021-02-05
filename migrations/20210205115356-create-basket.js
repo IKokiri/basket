@@ -8,6 +8,9 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      id_basket: {
+        type: Sequelize.UUID
+      },
       id_item: {
         type: Sequelize.INTEGER
       },

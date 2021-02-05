@@ -14,6 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   basket.init({
+    id_basket: DataTypes.UUID,
     id_item: DataTypes.INTEGER,
     quantity: DataTypes.INTEGER
   }, {
