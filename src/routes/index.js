@@ -1,28 +1,26 @@
 const routes = require('express').Router();
-const controller = require("../basket/controller");
+const controller = require("../basket/controller"); 
 
-routes.get('/', (req, res) => {
-    controller.get()
+routes.post("/basket/1.0/item/", async (req, res, next)=>{
+    const cesta  = await controller.novoitem(req.body)
+    res.status(201).json(cesta)
+})
+
+routes.delete("/basket/1.0/:id_basket", (req, res) => {   
+    controller.delete(req.params.id_basket);
+    res.send("Cesta deletada")   
 });
 
-routes.get('/:id', (req, res) => {
-    res.send(`busca ${req.params.id}`);
+routes.delete("/basket/1.0/item/:id_basket/:id_item/", (req, res) => {  
+    p = req.params
+    controller.deleteItem(p.id_basket,p.id_item);
+    res.send("Item deletado")   
 });
 
-routes.post('/', (req, res) => {
-    controller.post(req)
-    res.send("acdff")
-});
-
-routes.put('/:id', (req, res) => {
-    console.log(req.params)
-    console.log(req.body)
-    res.send(`alterado`);
-});
-
-routes.delete('/:id', (req, res) => {
-    console.log(req.params)
-    res.send(`removido`);
+routes.put("/basket/1.0/item/:id_basket/:id_item/:quantity", (req, res) => {  
+    p = req.params
+    controller.alterarQtdItem(p.id_basket,p.id_item,p.quantity);
+    res.send("Item alterado")   
 });
 
 module.exports = routes;

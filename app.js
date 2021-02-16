@@ -7,9 +7,8 @@ app.use(express.json())
 
 const { Sequelize } = require('sequelize');
 const sequelize = new Sequelize('basket', 'root', '', {
-    dialect: 'mysql',
+    dialect: 'mysql',    
     dialectOptions: {
-      // Your mysql2 options here
     }
   })
 
