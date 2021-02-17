@@ -1,36 +1,40 @@
 const controller = require('../basket/controller');
 require("mysql2/node_modules/iconv-lite").encodingExists("foo")
 const { validate: uuidValidate} = require('uuid');
+const faker = require('faker');
 
 let id_basket = 0;
 let id_item = 2;
-let quantity = 120;
+let id_company = faker.random.uuid();
+let quantity = faker.random.number();
 
-it('Verifica se o item foi criado no banco com os valores id_basket sendo uuid, id_item sendo 2 e quantity sendo 120', async () => {
+it('Criação de item no banco', async () => {
   
-  const req = {"body":{
+  const req = {
     "id_basket":"",
     "id_item":id_item,
-    "quantity":quantity
-  }}
+    "id_company":id_company,
+    "quantity": quantity
+  }
 
   const item = await controller.novoitem(req)
   id_basket = item.id_basket
   
-  expect(uuidValidate(item.id_basket) && item.id_item == id_item && item.quantity == quantity).toBe(true);
+  expect(uuidValidate(item.id_basket) && item.id_company == id_company && item.id_item == id_item && item.quantity == quantity).toBe(true);
 })
 
 it('Adiciona item à cesta existente', async () => {
   
-  const req = {"body":{
+  const req = {
     "id_basket":id_basket,
+    "id_company":id_company,
     "id_item":3,
-    "quantity":200
-  }}
+    "quantity":faker.random.number({'min':1,'max':1000})
+  }
 
   const item = await controller.novoitem(req)
 
-  expect(item.id_basket == id_basket && item.id_item == 3 && item.quantity == 200).toBe(true);
+  expect(item.id_basket == id_basket && item.id_item == 3 && item.quantity == req.quantity).toBe(true);
 })
 
 it('Altera quantidade de itens', async () => {
@@ -39,18 +43,19 @@ it('Altera quantidade de itens', async () => {
   expect(result[0]).toBe(1);
 })
 
-it('Deleta item da cesta', async () => {
+it('Deleta item da cesta de uma company', async () => {
 
-  const result = await controller.deleteItem(id_basket,id_item)
+  const result = await controller.deleteItem(id_basket,id_company,id_item)
   
   expect(result).toBe(1);
 })
 
 it('Deleta cesta do banco', async () => {
 
-  const result = await controller.delete(id_basket)
+  const result = await controller.delete(id_basket,id_company)
   
   expect(result).toBe(1);
+
 })
 
 
