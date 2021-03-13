@@ -9,13 +9,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       id_company: {
-        type: Sequelize.UUID
+        type: Sequelize.UUID,
+        allowNull: false
       },
       id_basket: {
         type: Sequelize.UUID
       },
       id_item: {
-        type: Sequelize.INTEGER
+        type: Sequelize.UUID
       },
       quantity: {
         type: Sequelize.INTEGER
