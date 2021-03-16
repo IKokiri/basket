@@ -161,7 +161,7 @@ describe('remoção de itens de uma compania',() => {
   })
 })
 
-describe('regata todos os item de uma cesta',()=>{
+describe('resgata todos os item de uma cesta',()=>{
   it('resgata todos os itens de uma cesta, quando uma cesta de uma empresa é buscada todos os itens são retornados', async()=>{
     
     // Criação da de dados para teste

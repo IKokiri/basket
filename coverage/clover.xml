@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1615924920038" clover="3.2.0">
+  <project timestamp="1615924920039" name="All files">
+    <metrics statements="61" coveredstatements="59" conditionals="32" coveredconditionals="29" methods="16" coveredmethods="15" elements="109" coveredelements="103" complexity="0" loc="61" ncloc="61" packages="2" files="3" classes="3"/>
+    <package name="models">
+      <metrics statements="24" coveredstatements="23" conditionals="9" coveredconditionals="6" methods="5" coveredmethods="5"/>
+      <file name="basket.js" path="C:\Users\lz\Documents\Projeto\basket\models\basket.js">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+      </file>
+      <file name="index.js" path="C:\Users\lz\Documents\Projeto\basket\models\index.js">
+        <metrics statements="20" coveredstatements="19" conditionals="9" coveredconditionals="6" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="2" type="cond" truecount="3" falsecount="0"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.basket">
+      <metrics statements="37" coveredstatements="36" conditionals="23" coveredconditionals="23" methods="11" coveredmethods="10"/>
+      <file name="controller.js" path="C:\Users\lz\Documents\Projeto\basket\src\basket\controller.js">
+        <metrics statements="37" coveredstatements="36" conditionals="23" coveredconditionals="23" methods="11" coveredmethods="10"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="20" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="22" count="10" type="cond" truecount="6" falsecount="0"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="26" count="9" type="stmt"/>
+        <line num="28" count="9" type="stmt"/>
+        <line num="31" count="9" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="37" count="2" type="cond" truecount="5" falsecount="0"/>
+        <line num="38" count="1" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="59" count="2" type="cond" truecount="4" falsecount="0"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="68" count="1" type="stmt"/>
+        <line num="73" count="1" type="stmt"/>
+        <line num="75" count="2" type="cond" truecount="6" falsecount="0"/>
+        <line num="76" count="1" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="95" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

@@ -34,7 +34,7 @@ exports.novoitem = async (req) => {
 // Funções 1.2
 exports.deleteItem =  async(id_company,id_basket,id_item) => {  
 
-  if(!item.id_company || !item.id_basket || !id_item){
+  if(!id_company || !id_basket || !id_item){
     return {'err':'Necessário preencher todos os campos obrigatorios'};
   }
 
@@ -52,6 +52,7 @@ exports.deleteItem =  async(id_company,id_basket,id_item) => {
 
    return deletado
 }
+
 // Funções 1.3
 exports.delete =  async (id_company,id_basket) => {
   
@@ -82,6 +83,7 @@ exports.alterarQtdItem = async (id_company,id_basket,id_item,item) => {
 
    return alterado
 }
+
 // Funções 1.5
 exports.buscarCesta = async(id_company,id_basket)=>{
 
